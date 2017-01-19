@@ -1,0 +1,90 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "ms-gpio",
+        "scope": null,
+        "escapedName": "ms-gpio",
+        "name": "ms-gpio",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "K:\\test"
+    ]
+  ],
+  "_from": "ms-gpio@latest",
+  "_id": "ms-gpio@1.0.0",
+  "_inCache": true,
+  "_location": "/ms-gpio",
+  "_nodeVersion": "4.2.6",
+  "_npmOperationalInternal": {
+    "host": "packages-18-east.internal.npmjs.com",
+    "tmp": "tmp/ms-gpio-1.0.0.tgz_1484840915908_0.5434050736948848"
+  },
+  "_npmUser": {
+    "name": "objectgyan",
+    "email": "mayankpsingh@yahoo.in"
+  },
+  "_npmVersion": "4.1.1",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "ms-gpio",
+    "scope": null,
+    "escapedName": "ms-gpio",
+    "name": "ms-gpio",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/ms-gpio/-/ms-gpio-1.0.0.tgz",
+  "_shasum": "ed86619dcac365b671fdf4fd0670827da9dce00a",
+  "_shrinkwrap": null,
+  "_spec": "ms-gpio",
+  "_where": "K:\\test",
+  "author": {
+    "name": "Mayank Singh"
+  },
+  "bugs": {
+    "url": "https://github.com/mayankmania/ms-gpio.js/issues"
+  },
+  "dependencies": {},
+  "description": "API for controlling Raspberry PI GPIO pins",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "ed86619dcac365b671fdf4fd0670827da9dce00a",
+    "tarball": "https://registry.npmjs.org/ms-gpio/-/ms-gpio-1.0.0.tgz"
+  },
+  "homepage": "https://github.com/mayankmania/ms-gpio.js#readme",
+  "keywords": [
+    "raspberry",
+    "raspberry-pi",
+    "automation",
+    "gpio",
+    "home-automation",
+    "smart-home"
+  ],
+  "license": "MIT",
+  "main": "ms-gpio.js",
+  "maintainers": [
+    {
+      "name": "objectgyan",
+      "email": "mayankpsingh@yahoo.in"
+    }
+  ],
+  "name": "ms-gpio",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mayankmania/ms-gpio.js.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.0"
+}
