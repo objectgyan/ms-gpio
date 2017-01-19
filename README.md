@@ -5,13 +5,12 @@ Manage Raspberry Pi GPIO pins with node.js & Raspbian (Linux) OS
 
 ## Setup
 
-In order to run this application you need to have Raspbian OS installed on Raspberry PI.To install Raspbian OS, you can go to  https://www.raspberrypi.org/learning/software-guide/quickstart
+Raspbian OS must be preloaded/installed on Raspberry PI device.For installation refer https://www.raspberrypi.org/learning/software-guide/quickstart
 
-Make sure you are running the latest version of node on your raspberry terminal,follow below steps :
+Latest version of node is running on your Raspberry PI device terminal, follow below steps to update node to latest version:
 ```
 curl -sLS https://apt.adafruit.com/add | sudo bash
 sudo apt-get install node
-
 ```
 
 This module can then be installed with npm:
@@ -38,9 +37,9 @@ Reads the value of a pin.
 * pinNo : Reference to the GPIO pin
 
 #### write(pinNo, value)
-Writes the value of a channel.
+Writes the value of a pin.
 * pinNo : Reference to the GPIO pin
-* value: int value of 1 0r 0 to specify whether the channel will turn on or off.
+* value: int value of 1 0r 0 to specify whether the pin will turn on or off.
 
 ## Examples
 
