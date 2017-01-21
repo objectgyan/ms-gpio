@@ -44,6 +44,9 @@ Writes the value of a pin.
 * value : A boolean value of **true** for high voltage (ON) & **false** for low voltage (OFF) must be passed
 * error : Prior to the write operation, setup operation must be performed. Else error is thrown from the method
 
+#### tearDown()
+Unexports all the exported pins.
+
 ## Examples
 ### Setup and read the value of a pin
 ```js
@@ -61,14 +64,8 @@ gpio.write(16,false); //Sets the GPIO to low
 
 ```
 
-### Export pin
+### Tear down the exported pin
 ```js
 var gpio = require('ms-gpio');
-gpio.export(16);
-```
-
-### Unexport pins
-```js
-var gpio = require('ms-gpio');
-gpio.unExport(16);
+gpio.tearDown();
 ```
