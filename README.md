@@ -31,7 +31,7 @@ GPIO pins can be accessed ; either using the Raspberry Pi physical numbering or 
 #### setup(pinNo, direction)
 Sets up a pin for read or write. It must be done before the pin can be used for either reading or writing
 * pinNo : Reference to the GPIO pin
-* direction: Pin direction can be set to **INPUT_MODE** for read mode or **OUTPUT_MODE** for write mode. If not passed, it defaults to OUTPUT_MODE.
+* direction: Pin direction can be set to **INPUT_MODE** for read mode or **OUTPUT_MODE** for write mode. If not passed, it defaults to OUTPUT_MODE
 
 #### read(pinNo)
 Reads the value of a pin, returns boolean value **true** for high voltage (ON) & **false** for low voltage (OFF).
@@ -42,7 +42,7 @@ Reads the value of a pin, returns boolean value **true** for high voltage (ON) &
 Writes the value of a pin.
 * pinNo : Reference to the GPIO pin
 * value : A boolean value of **true** for high voltage (ON) & **false** for low voltage (OFF) must be passed
-* error : Prior to the read operation, setup operation must be performed. Else error is thrown from the method
+* error : Prior to the write operation, setup operation must be performed. Else error is thrown from the method
 
 ## Examples
 ### Setup and read the value of a pin
