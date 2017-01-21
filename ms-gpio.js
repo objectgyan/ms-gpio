@@ -78,7 +78,7 @@ var Gpio = function () {
             var pinValue = fs.readFileSync(currentGpioPath).toString();
             return pinValue.trim()==="1";
         } catch (error) {
-            throw new Error('Pin '+pinNo +' has not been exported for read');
+            throw new Error('Pin '+ pinNo +' has not been exported for read');
         }
     }
 
@@ -88,7 +88,7 @@ var Gpio = function () {
             var valueToSet = value ? "1":"0";
             fs.writeFileSync(currentGpioPath, valueToSet);
         } catch (error) {
-            throw new Error('Pin '+pinNo +' has not been exported for write');
+            throw new Error('Pin '+ pinNo +' has not been exported for write');
         }
             
     };
