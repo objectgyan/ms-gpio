@@ -39,20 +39,6 @@ function concateString() {
     return path;
 }
 
-function errorLogger(err) {
-    if (typeof err === 'object') {
-        if (err.message) {
-            console.log('\nMessage: ' + err.message)
-        }
-        if (err.stack) {
-            console.log('\nStacktrace:')
-            console.log('====================')
-            console.log(err.stack);
-        }
-    } else {
-        console.log('dumpError :: argument is not an object');
-    }
-}
 
 var Gpio = function () {
 
@@ -64,42 +50,26 @@ var Gpio = function () {
         if (arguments.length == 1) {
             direction = this.OUTPUT_MODE;
         }
-        try {
             var currentGpioPath = path.join(this.GPIO_Path, concateString("gpio", gpioPins[pinNo]));
             if (!fs.existsSync(currentGpioPath)) {
                 this.exportPin(gpioPins[pinNo]);
                 this.setDirection(gpioPins[pinNo], direction);
             }
-        } catch (e) {
-            errorLogger(e);
-        }
     };
 
     this.exportPin = function (pinNo) {
-        try {
             var currentGpioPath = path.join(this.GPIO_Path, "export");
             fs.writeFileSync(currentGpioPath, pinNo);
-        } catch (e) {
-            errorLogger(e);
-        }
     };
 
     this.unExportPin = function (pinNo) {
-        try {
             var currentGpioPath = path.join(this.GPIO_Path, "unexport");
             fs.writeFileSync(currentGpioPath, pinNo);
-        } catch (e) {
-            errorLogger(e);
-        }
     };
 
     this.setDirection = function (pinNo, direction) {
-        try {
             var currentGpioPath = path.join(this.GPIO_Path, concateString("gpio", pinNo), "direction");
             fs.writeFileSync(currentGpioPath, direction);
-        } catch (e) {
-            errorLogger(e);
-        }
     };
 
     this.read = function (pinNo) {
@@ -115,13 +85,9 @@ var Gpio = function () {
     }
 
     this.write = function (pinNo, value) {
-        try {
             var currentGpioPath = path.join(this.GPIO_Path, concateString("gpio", gpioPins[pinNo]), "value");
             var valueToSet = value ? "1":"0";
             fs.writeFileSync(currentGpioPath, valueToSet);
-        } catch (e) {
-            errorLogger(e);
-        }
     };
 };
 
