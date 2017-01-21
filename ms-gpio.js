@@ -57,7 +57,7 @@ function errorLogger(err) {
 var gpio = function () {
 
     //GPIO Path is made injectable to allow Raspberry PI simulation on local environment
-    var gpioPath = (arguments.length == 1 && arguments[0] != undefined) ? arguments[0] : "/sys/class/gpio";
+    this.gpioPath = "/sys/class/gpio";
 
     this.OutputMode = "out";
     this.InputMode = "in";

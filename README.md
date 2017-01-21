@@ -5,15 +5,15 @@ Manage Raspberry Pi GPIO pins with node.js & Raspbian (Linux) OS
 
 ## Setup
 
-Raspbian OS must be preloaded/installed on Raspberry PI device.For installation refer https://www.raspberrypi.org/learning/software-guide/quickstart
+1. Raspbian OS must be preloaded/installed on Raspberry PI device. For installation refer https://www.raspberrypi.org/learning/software-guide/quickstart
 
-Latest version of node is running on your Raspberry PI device terminal, follow below steps to update node to latest version:
+2. Latest version of node is running on your Raspberry PI device terminal, follow below steps to update node to latest version:
 ```
 curl -sLS https://apt.adafruit.com/add | sudo bash
 sudo apt-get install node
 ```
 
-This module can then be installed with npm:
+**ms-gpio** module can then be installed with npm:
 ```
 npm install ms-gpio
 ```
@@ -21,14 +21,14 @@ npm install ms-gpio
 ## Usage
 In order to work with Raspberry PI GPIOs, node application must run under root access
 
-Prior to reading or writing on a pin, **setup** operation must be performed.After this write and read operatin on a pin can be done.
+Prior to reading or writing on a pin, **setup** operation must be performed. After this write and read operation on a pin can be done.
 
 ## API
 
 ### Methods
 
 #### setup(pinNo, direction)
-Sets up a pin for read or write. Must be done before the pin can be used.
+Sets up a pin for read or write. It must be done before the pin can be used for either reading or writing
 * pinNo : Reference to the GPIO pin
 * direction: The pin direction, pass either InputMode for read mode or OutputMode for write mode. Defaults to OutputMode.
 

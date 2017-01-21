@@ -49,7 +49,7 @@
     "name": "Mayank Singh"
   },
   "bugs": {
-    "url": "https://github.com/mayankmania/ms-gpio.js/issues"
+    "url": "https://github.com/mayankmania/ms-gpio.git/issues"
   },
   "dependencies": {},
   "description": "API for controlling Raspberry PI GPIO pins",
@@ -59,14 +59,18 @@
     "shasum": "ed86619dcac365b671fdf4fd0670827da9dce00a",
     "tarball": "https://registry.npmjs.org/ms-gpio/-/ms-gpio-1.0.0.tgz"
   },
-  "homepage": "https://github.com/mayankmania/ms-gpio.js#readme",
+  "homepage": "https://github.com/mayankmania/ms-gpio.git#readme",
   "keywords": [
     "raspberry",
     "raspberry-pi",
     "automation",
     "gpio",
     "home-automation",
-    "smart-home"
+    "smart-home",
+    "raspberrypi",
+    "cloud",
+    "iot",
+    "remotely controlling devices"
   ],
   "license": "MIT",
   "main": "ms-gpio.js",
@@ -78,10 +82,10 @@
   ],
   "name": "ms-gpio",
   "optionalDependencies": {},
-  "readme": "ERROR: No README data found!",
+  "readme": "README.md",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mayankmania/ms-gpio.js.git"
+    "url": "git+https://github.com/mayankmania/ms-gpio.git"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
