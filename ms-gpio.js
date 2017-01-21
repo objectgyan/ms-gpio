@@ -46,15 +46,15 @@ var Gpio = function () {
     this.OUTPUT_MODE = "out";
     this.INPUT_MODE = "in";
 
-    this.setUp = function (pinNo, direction) {
+    this.setup = function (pinNo, direction) {
         if (arguments.length == 1) {
             direction = this.OUTPUT_MODE;
         }
             var currentGpioPath = path.join(this.GPIO_Path, concateString("gpio", gpioPins[pinNo]));
-            if (!fs.existsSync(currentGpioPath)) {
-                this.exportPin(gpioPins[pinNo]);
-                this.setDirection(gpioPins[pinNo], direction);
-            }
+        if (!fs.existsSync(currentGpioPath)) {
+            this.exportPin(gpioPins[pinNo]);
+            this.setDirection(gpioPins[pinNo], direction);
+        }
     };
 
     this.exportPin = function (pinNo) {
@@ -74,20 +74,23 @@ var Gpio = function () {
 
     this.read = function (pinNo) {
         var currentGpioPath = path.join(this.GPIO_Path, concateString("gpio", gpioPins[pinNo].toString()), "value");
-        if (fs.existsSync(currentGpioPath)) {
+        try {
             var pinValue = fs.readFileSync(currentGpioPath).toString();
             return pinValue.trim()==="1";
+        } catch (error) {
+            throw new Error('Pin '+pinNo +' has not been exported for read');
         }
-        else
-        {
-            throw new Error('Pin '+pinNo +' has not been exported for write');
-        }    
     }
 
     this.write = function (pinNo, value) {
+        try {
             var currentGpioPath = path.join(this.GPIO_Path, concateString("gpio", gpioPins[pinNo]), "value");
             var valueToSet = value ? "1":"0";
             fs.writeFileSync(currentGpioPath, valueToSet);
+        } catch (error) {
+            throw new Error('Pin '+pinNo +' has not been exported for write');
+        }
+            
     };
 };
 
